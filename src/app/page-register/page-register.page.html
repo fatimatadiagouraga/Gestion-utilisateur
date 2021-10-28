@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>  
+    <ion-back-button slot="start" defaultHref="/"></ion-back-button>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ><br><br>
+  <ion-label><strong>Veuillez renseigner les champs</strong></ion-label><br><br>
+ <form #form="ngForm" (ngSubmit)="register(form)">
+    <ion-item>
+      <ion-input type="text" ngModel name="nom"  placeholder="Nom" required></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input type="text" ngModel name="prenom" placeholder="Prenom" required></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input type="tel" ngModel name="tel" placeholder="Tel" required></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input type="email" ngModel name="email" placeholder="Email" required></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input type="password" ngModel name="password" placeholder="Mot de passe" required></ion-input>
+    </ion-item><br><br>
+    <ion-button type="submit" >Enregistrer</ion-button>
+  </form>
+</ion-content>

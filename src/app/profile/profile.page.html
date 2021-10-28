@@ -1,0 +1,17 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-back-button routerLink="/home" slot="start" defaultHref="home" color="danger"></ion-back-button>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-img src="assets/images/profil.png"></ion-img>
+  
+      <h1 class="nom"><strong>{{user?.prenom}}  {{user?.nom}}</strong></h1>
+      <h1>{{user?.telephone}}</h1>
+      <h3>{{user?.email}}</h3>
+
+       
+    
+</ion-content>

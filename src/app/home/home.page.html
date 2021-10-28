@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="success"> 
+    <ion-back-button slot="start" defaultHref="/" color="danger"></ion-back-button> 
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <ion-icon name="search-sharp" routerLink="/search">Search</ion-icon>
+  <ion-icon name="person-circle-outline" color="danger" routerLink="/profile" class="profil">profil</ion-icon>  
+    
+  <ion-item *ngFor="let item of items |async" >
+    <h2>{{ item.nom }}</h2>
+  </ion-item>
+</ion-content>

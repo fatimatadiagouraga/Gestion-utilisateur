@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/"></ion-back-button>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-content-header>
+    <ion-img src="assets/images/login.png"></ion-img>
+  </ion-content-header><br><br>
+  <ion-label text-align="center"><strong>Connectez-vous!</strong></ion-label><br>
+  <form #donnees="ngForm" (ngSubmit)="loginUser(donnees)">
+    <ion-item>
+      <ion-input type="email" expanded="box" placeholder="email" ngModel name="email" class="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="password" ngModel name="password" class="password"></ion-input>
+    </ion-item><br>
+      <ion-button type="submit" color="success" class="connecter" > Connecter</ion-button>
+      <ion-button type="reset"  color="danger" class="annuler">Annuler</ion-button>
+  </form><br><br>
+  <a href="page-passwordforgot" class="forgot">Mot de pass oublie</a>
+  <a href="page-register" class="register">S'inscrire</a>
+
+</ion-content>
