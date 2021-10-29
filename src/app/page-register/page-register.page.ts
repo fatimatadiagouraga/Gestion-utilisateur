@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../services/service.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-register',
@@ -9,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class PageRegisterPage implements OnInit {
 
-  constructor(public serve : ServiceService, public database : AngularFirestore ) { }
+  constructor(public serve : ServiceService, public database : AngularFirestore,public route :Router ) { }
 
   ngOnInit() {
   }
@@ -23,7 +24,9 @@ export class PageRegisterPage implements OnInit {
           'email': data.value.email,
           'password': data.value.password,
           'telephone': data.value.tel
+          
         })
+        this.route.navigate(["login"]);
       })
     } catch (error) {
       
