@@ -6,9 +6,9 @@
 <ion-content>
   
   <ion-icon name="search-sharp" routerLink="/search">Search</ion-icon>
-  <ion-icon name="person-circle-outline" color="danger" routerLink="/profile" class="profil">profil</ion-icon>  
+  <ion-icon name="person-circle-outline" color="danger" routerLink="/profile" class="profil">Profil</ion-icon>  
     
   <ion-item *ngFor="let item of items |async" >
-    <h2>{{ item.nom }}</h2>
+    <h2>{{ item.nom }} {{ item.prenom }}</h2>
   </ion-item>
 </ion-content>

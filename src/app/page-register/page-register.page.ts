@@ -31,6 +31,7 @@ export class PageRegisterPage implements OnInit {
     } catch (error) {
       
     }
+    
   }
 
 }
